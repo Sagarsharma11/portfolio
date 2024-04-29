@@ -1,0 +1,29 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

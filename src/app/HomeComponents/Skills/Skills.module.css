@@ -1,0 +1,78 @@
+.skills--container{
+    padding: 5rem 20rem 0rem 20rem;
+}
+.title{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--title-color);
+}
+.card--container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.card--box{
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add transitions for background color and transform */
+
+}
+
+.card--icons{
+    color: var(--title-color);
+    width: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    transition: color 0.7s ease; /* Add transition for color change */
+
+}
+.card--name{
+    font-size: 18px;
+    color:var(--title-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    transition: color 0.7s ease; /* Add transition for color change */
+
+}
+
+.card--box:hover {
+    transform: scale(1.1); /* Scale up the card on hover */
+}
+.card--box:hover > .card--icons,
+.card--box:hover > .card--name
+{
+    color: var(--neon-color);
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    .skills--container{
+        padding: 5rem 1rem 0rem 1rem;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .skills--container{
+        padding: 5rem 1rem 0rem 1rem;
+    }
+    .card--container{
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .skills--container{
+        padding: 5rem 1rem 0rem 1rem;
+    }
+    .card--container{
+        gap: 1rem;
+    }
+}

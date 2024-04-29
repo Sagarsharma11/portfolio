@@ -1,0 +1,11 @@
+.footer--container {
+    /* padding: 5rem 20rem 5rem 20rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .footer-inner-container{
+    height: 400px;
+    width: 100%;
+    background-color: var(--primary-color);
+  }

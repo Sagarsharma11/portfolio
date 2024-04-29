@@ -1,0 +1,84 @@
+.Portfolio--container {
+  padding: 5rem 20rem 0rem 20rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--title-color);
+}
+
+.cards--container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.card--box {
+  background-color: var(--main-theme);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.875rem;
+  border: 0.1rem solid var(--primary-color);
+  overflow: hidden;
+  transition: transform 0.7s ease;
+}
+.card--box:hover {
+  transform: scale(0.9); 
+}
+
+.image--container {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+}
+
+.card--box .image--container img {
+  height: 100%;
+  width: 100%;
+}
+
+.card--links {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.card--links a {
+  color: var(--title-color);
+  text-decoration: none;
+}
+
+
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .Portfolio--container {
+    padding: 5rem 1rem 0rem 1rem;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .Portfolio--container {
+    padding: 5rem 1rem 0rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Portfolio--container {
+    padding: 5rem 1rem 0rem 1rem;
+  }
+
+  .cards--container {
+    display: flex;
+    justify-content: normal;
+    overflow-x: scroll;
+    gap: 1rem;
+    padding: 2rem 0;
+    border: 1px solid red;
+  }
+
+  .card--box {
+ 
+  }
+}

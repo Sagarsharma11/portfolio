@@ -1,0 +1,128 @@
+.RecentExplore--container {
+  padding: 5rem 20rem 0rem 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--title-color);
+}
+.RecentExplore--container p {
+  color: #38b6ff;
+}
+.cards--container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.console--container {
+  max-height: 450px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 0.875rem;
+  display: flex;
+  padding: 2rem 3rem;
+  overflow-y: scroll;
+  position: relative;
+}
+.console--container::-webkit-scrollbar {
+  width:6px;
+}
+
+.console--container::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.console--container::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.console--container::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.console--container pre {
+  color: #a7fd39;
+  flex: 1;
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding-bottom: 4rem;
+}
+
+.console--container
+.copyCode{
+  position: fixed;
+  z-index: 9999;
+  color: var(--title-color);
+  position: sticky;
+  right: 0.1rem;
+  top: 0.1rem;
+  white-space: nowrap;
+  background-color: black;
+  height: fit-content;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: color 0.7s ease;
+}
+.console--container
+.copyCode:hover{
+  color: wheat
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .RecentExplore--container {
+    padding: 5rem 1rem 0rem 1rem;
+    gap: 1rem;
+  }
+  .console--container pre {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .console--container {
+    padding: 1rem 0.5rem;
+  }
+  .cards--container {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .RecentExplore--container {
+    padding: 5rem 1rem 0rem 1rem;
+    gap: 1rem;
+  }
+  .console--container pre {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .console--container {
+    padding: 1rem 0.5rem;
+  }
+  .cards--container {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .RecentExplore--container {
+    padding: 5rem 0rem 0rem 1rem;
+    gap: 1rem;
+  }
+  .console--container pre {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .console--container {
+    padding: 1rem 0.5rem;
+  }
+  .cards--container {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+}

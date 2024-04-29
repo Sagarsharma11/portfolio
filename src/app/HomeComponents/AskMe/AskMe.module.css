@@ -1,0 +1,96 @@
+.AskMe--container {
+  padding: 5rem 20rem 5rem 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  /* background-color: var(--primary-color); */
+}
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--title-color);
+}
+.cards--container {
+  height: 400px;
+  width: 100%;
+  background-color: var(--main-theme);
+  border-radius: 0.875rem;
+  padding: 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--primary-color);
+}
+.cards--container input{
+  height: 40px;
+  width: 100%;
+  border-radius: 0.75rem ;
+  border: 0.4px solid #A7FD39;
+  font-size: 18px;
+  padding: 1rem;
+}
+.cards--container
+input[type]:focus{ 
+  box-shadow: none;  
+  outline: 1px solid #A7FD39;
+  transition: ease-in-out 0.5s;
+} 
+
+.cards--container textarea{
+  height: 200px;
+  border-radius: 0.75rem;
+  border: 0.4px solid #A7FD39;
+  padding: 1rem;
+  font-size: 18px;
+}
+.cards--container textarea:focus{
+  box-shadow: none;  
+  outline: 1px solid #A7FD39;
+  transition: ease-in-out 0.5s;
+}
+.submit--container{
+  display: flex;
+  color: #A7FD39;
+  gap: 1rem;
+  cursor: pointer;
+}
+.submit--container p:nth-child(1){
+  font-weight: 800;
+}
+.submit--container p:nth-child(2):hover{
+  font-size: 18px;
+  transition: all 0.7s;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  .AskMe--container {
+    padding: 5rem 1rem 0rem 1rem;
+    gap: 1rem;
+  }
+  .cards--container {
+    padding: 1rem 1rem;
+    height: 363px;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .AskMe--container {
+    padding: 5rem 1rem 0rem 1rem;
+    gap: 1rem;
+  }
+  .cards--container {
+    padding: 1rem 1rem;
+    height: 363px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .AskMe--container {
+    padding: 5rem 1rem 0rem 1rem;
+    gap: 1rem;
+  }
+  .cards--container {
+    padding: 1rem 1rem;
+    height: 363px;
+  }
+}
