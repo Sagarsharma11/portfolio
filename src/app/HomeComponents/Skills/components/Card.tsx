@@ -6,7 +6,7 @@ const Card = ({item}:any) => {
     <div className={styles["card--box"]}>
         <div className={styles["card--icons"]}>{item?.icons}</div>
         <div className={styles["card--name"]}>
-          {item.name}
+          {item["technologyName"]}
         </div>
     </div>
   )

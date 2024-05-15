@@ -1,69 +1,56 @@
-import React from 'react';
-import styles from "./Skills.module.css"
-import Card from './components/Card';
-import { FaHtml5 } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
-import { IoLogoCss3 } from "react-icons/io5";
-import { FaReact } from "react-icons/fa";
-import { TbBrandNextjs } from "react-icons/tb";
-import { SiMysql } from "react-icons/si";
-import { GrStorage } from "react-icons/gr";
-import { FaPython } from "react-icons/fa";
-import { FaAws } from "react-icons/fa";
+"use client";
+import React, { useState, useEffect } from "react";
+import styles from "./Skills.module.css";
+import Card from "./components/Card";
+
+import { iconData } from "./data/dataSets";
+
 const Skills = () => {
-  const data = [
-    {
-      icons: <FaHtml5 size={70} />,
-      name:"HTML5"
-    },
-    {
-      icons: <FaNodeJs size={70} />,
-      name:"Node JS"
-    },
-    {
-      icons: <SiExpress size={70} />,
-      name:"Express JS"
-    },
-    {
-      icons: <IoLogoCss3 size={70} />,
-      name:"Css3"
-    },
-    {
-      icons: <FaReact size={70} />,
-      name:"React JS"
-    },
-    {
-      icons: <TbBrandNextjs size={70} />,
-      name:"Next JS"
-    },
-    {
-      icons: <SiMysql size={70} />,
-      name:"Mysql"
-    },
-    {
-      icons: <GrStorage size={70} />,
-      name:"MongoDb"
-    },
-    {
-      icons: <FaPython size={70}  />,
-      name:"Python"
-    },
-    {
-      icons: <FaAws size={70} />,
-      name:"AWS"
-    },
-  ]
+  const [data, setData] = useState<any>([]);
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const jsonResponse = await fetch(
+        "http://localhost/portfolio-backend/Technology/getAllTechnology.php"
+      );
+      const response = await jsonResponse.json();
+      console.log(response);
+      setData(response?.data);
+      let array: any[] = [];
+      response?.data?.forEach((ele: any, index: number) => {
+        let obj = ele;
+        for(let i=0; i<iconData.length; i++ ){
+          console.log(Object.keys(iconData[i]), " ===== ",ele.technologyName, "~", Object.keys(iconData[i]) ==ele.technologyName);
+          if(ele.technologyName == Object.keys(iconData[i])){
+            console.log("all are equals")
+            obj.icons = iconData[i][Object.keys(iconData[i]) as any];
+            array.push(obj)
+          }
+        }
+        setData(array);
+
+        // console.log(ele);
+      });
+      // console.log(`array => ${array}`);
+
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className={styles["skills--container"]}>
-        <h2 className={styles["title"]}>My Skills</h2>
-        <div className={styles["card--container"]}>
-                {
-                    data.map((item, key)=>(<Card key={key} item={item}/>))
-                }
-        </div>
+      <h2 className={styles["title"]}>My Skills</h2>
+      <div className={styles["card--container"]}>
+        {data.map((item:any, key:number) => (
+          <Card key={key} item={item} />
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
