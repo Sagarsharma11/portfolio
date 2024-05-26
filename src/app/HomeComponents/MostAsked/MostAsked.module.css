@@ -21,9 +21,10 @@
   color: #38b6ff;
   line-height: 2.125rem;
 }
-.links--container div span {
-  text-decoration: underline;
+.links--container div .span2 {
+  text-decoration: none;
   cursor: pointer;
+  color: var(--secondary-color);
 }
 @media only screen and (max-width: 480px) {
   .mostAsked--container {

@@ -27,6 +27,10 @@
     cursor: pointer;
     transition: color 0.7 ease-in-out;
 }
+.links--container ul li a{
+    color: #38B6FF;
+    text-decoration: none;
+}
 .links--container ul li:hover{
     color: #6ba5c7;
 }

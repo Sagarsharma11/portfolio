@@ -1,11 +1,76 @@
 .footer--container {
-    /* padding: 5rem 20rem 5rem 20rem; */
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  .footer-inner-container{
-    height: 400px;
-    width: 100%;
-    background-color: var(--primary-color);
-  }
+  /* padding: 5rem 20rem 5rem 20rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+}
+
+.footer-inner-container {
+  height: 100%;
+  width: 100%;
+  background-color: var(--main-color);
+  border-top: 0.1rem solid #38b6ff;
+  display: flex;
+}
+
+.footerLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.contentBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.contentBox div:nth-child(1) {
+  display: flex;
+}
+.contentBox div:nth-child(1) h2{
+  color: var(--neon-color);
+  font-weight:400;
+  font-size: 50px;
+  padding: 2rem 2rem 0 2rem;
+}
+.stepImage{
+  height: 7.5px;
+  width: 20px;
+}
+
+.contentBox div:nth-child(2) p{
+  color: var(--neon-color);
+  font-weight:400;
+  font-size: 18px;
+  letter-spacing: 0.1rem;
+  padding: 1rem 2rem 0 2rem;
+}
+.contentBox span{
+  color: #38b6ff;
+  font-size: 22px;
+}
+.contentBox div:nth-child(2) .viewMore{
+  text-decoration: underline;
+}
+.contentBox div:nth-child(3){
+  display: flex;
+  padding: 2rem 2rem 0 2rem;
+  justify-content: space-between;
+}
+.contentBox div:nth-child(3)
+.socialMedia{
+  display: flex;
+  gap: 1rem;
+}
+.contentBox div:nth-child(3)
+.copyRight{
+  display: flex;
+  justify-content: flex-end;
+}
+.contentBox div:nth-child(3)
+.copyRight p{
+  color: #fff;
+  font-weight: 500;
+}
