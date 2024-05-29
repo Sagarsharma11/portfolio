@@ -32,12 +32,12 @@ const Footer = () => {
             </div>
             <div>
               <div className={styles.socialMedia}>
-                 <a href="#"><IoLogoLinkedin size={40} color={"#0077B5"} /></a> 
-                 <a href="#"><FaFacebookSquare size={40} color={"#1877F2"} /></a> 
-                 <a href="#"><FaSquareInstagram size={40} color={"#405DE6"} /></a> 
-                 <a href="#"><FaSquareGithub size={40} color={"#181717"} /></a> 
-                 <a href="#"><IoIosMail size={40} color={"#D93025"} /></a> 
-                 <a href="#"><IoCallSharp size={40} color={"#4285F4"} /></a> 
+                 <a href="https://www.linkedin.com/in/sagar-sharma-697a2519b/" target="_blank"><IoLogoLinkedin size={40} color={"#0077B5"} /></a> 
+                 <a href="https://www.facebook.com/sgr.sharma.5?mibextid=ZbWKwL" target="_blank"><FaFacebookSquare size={40} color={"#1877F2"} /></a> 
+                 <a href="https://www.instagram.com/sagars_soul?igsh=MXVzbWp1ZThua3Ft" target="_blank"><FaSquareInstagram size={40} color={"#405DE6"} /></a> 
+                 <a href="https://github.com/Sagarsharma11" target="_blank"><FaSquareGithub size={40} color={"#181717"} /></a> 
+                 <a href="mailto:sagarsharmatech00@gmail.com" ><IoIosMail size={40} color={"#D93025"} /></a> 
+                 <a href="tel:7366986973" ><IoCallSharp size={40} color={"#4285F4"} /></a> 
               </div>
               <div className={styles.copyRight}>
                   <p>© 2024 Sagar. All rights reserved.</p>

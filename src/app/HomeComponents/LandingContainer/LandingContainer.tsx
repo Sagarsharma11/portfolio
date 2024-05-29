@@ -18,7 +18,7 @@ const LandingContainer = () => {
             <div>
               <MdKeyboardDoubleArrowRight />
             </div>
-            <h2>I am develope</h2>
+            <h2>I am Sagar</h2>
           </div>
           <div className={styles["textTwo"]}>
             <div>
