@@ -7,8 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-// import required modules
-import { Pagination } from 'swiper/modules';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Portfolio = () => {
   const data = [
@@ -29,71 +28,71 @@ const Portfolio = () => {
       path:"/image/portfolio/p (20).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (21).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (1).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (2).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (3).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (4).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (5).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (6).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (7).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (8).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (9).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (10).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (11).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (12).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (13).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (14).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (15).png"
     },
     {
-      link:"#",
+      link:null,
       path:"/image/portfolio/p (16).png"
     },
 

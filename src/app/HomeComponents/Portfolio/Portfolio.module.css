@@ -45,9 +45,10 @@
   padding: 0.5rem;
 }
 
-.card--links a {
+.card--links p {
   color: var(--title-color);
   text-decoration: none;
+  cursor: pointer;
 }
 
 

@@ -1,0 +1,68 @@
+.SiteViewer--modal .modal-content {
+  background-color: var(--main-theme);
+  align-items: unset;
+  height: auto;
+}
+.SiteViewer--modal .modal-header,
+.SiteViewer--modal .modal-footer {
+  border: none;
+}
+.SiteViewer--modal .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.SiteViewer--modal .modal-body div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.SiteViewer--modal .modal-body div:nth-child(1) h2 {
+  text-align: center;
+  color: var(--Black-900, #3d3d3d);
+  text-align: center;
+
+  font-family: Montserrat;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.375rem;
+}
+.SiteViewer--modal .modal-body div:nth-child(1) p {
+  text-align: center;
+  color: var(--Black-900, #3d3d3d);
+  text-align: center;
+
+  font-family: Inter;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+.SiteViewer--modal .modal-body div:nth-child(2) button {
+  display: flex;
+  height: 2.375rem;
+  padding: 0rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border: none;
+  border-radius: var(--Curve-curve-md, 0.5rem);
+  background: linear-gradient(90deg, #34b4fc 0%, #007bcb 100%);
+
+  color: var(--Black-0, #fff);
+  text-align: center;
+
+  font-family: Inter;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0rem;
+  letter-spacing: 0.0225rem;
+}
+.SiteViewer--modal img {
+  height: 100%;
+  width: 100%;
+}
