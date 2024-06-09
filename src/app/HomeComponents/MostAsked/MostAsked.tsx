@@ -7,7 +7,7 @@ const Contributions = () => {
   useEffect(() => {
     fetchData();
   }, []);
-
+//git comment
   const fetchData = async () => {
     try {
       const jsonResponse = await fetch(
