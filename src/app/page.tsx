@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "./HomeComponents/Navbar/Navbar";
 import LandingContainer from "./HomeComponents/LandingContainer/LandingContainer";

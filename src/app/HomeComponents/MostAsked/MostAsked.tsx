@@ -7,11 +7,12 @@ const Contributions = () => {
   useEffect(() => {
     fetchData();
   }, []);
-
+//git comment
   const fetchData = async () => {
     try {
       const jsonResponse = await fetch(
-        `${process.env.NEXT_PUBLIC_API}/most-asked-question`
+        `https://sagar.alphaworldtech.com/most-asked-question`
+        // `${process.env.NEXT_PUBLIC_API}/most-asked-question`
       );
       const response = await jsonResponse.json();
       console.log(response?.data);
