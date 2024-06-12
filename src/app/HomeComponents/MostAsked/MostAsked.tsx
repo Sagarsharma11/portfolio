@@ -1,5 +1,5 @@
 "use client"
-import React,{useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from "./MostAsked.module.css"
 
 const Contributions = () => {
@@ -7,7 +7,7 @@ const Contributions = () => {
   useEffect(() => {
     fetchData();
   }, []);
-//git comment
+  //git comment
   const fetchData = async () => {
     try {
       const jsonResponse = await fetch(
@@ -23,14 +23,14 @@ const Contributions = () => {
   };
   return (
     <div className={styles["mostAsked--container"]}>
-        <h2 className={styles["title"]}>Most Asked</h2>
-        <div className={styles["links--container"]}>
-                    {
-                      data.length?
-                       data?.map((ele:any,key:any)=><div key={key}>{ele?.question}  <span>View<span className={styles["span2"]}> ({ele?.viewCount})</span></span></div>)
-                        :""
-                    }
-        </div>
+      <h2 className={styles["title"]}>Most Asked</h2>
+      <div className={styles["links--container"]}>
+        {
+          data.length ?
+            data?.map((ele: any, key: any) => <div key={key}>{ele?.question}  <span>View<span className={styles["span2"]}> ({ele?.viewCount})</span></span></div>)
+            : ""
+        }
+      </div>
     </div>
   )
 }
