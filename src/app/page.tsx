@@ -8,6 +8,7 @@ import RecentExplore from "./HomeComponents/RecentExplore/RecentExplore";
 import AskMe from "./HomeComponents/AskMe/AskMe";
 import MostAsked from "./HomeComponents/MostAsked/MostAsked";
 import Footer from "./HomeComponents/Footer/Footer"
+import WorkExperience from "./HomeComponents/WorkExperience/WorkExperience";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Navbar/>
         <LandingContainer/>
         <Skills/>
+        <WorkExperience/>
         <Contributions/>
         <Portfolio/>
         <RecentExplore/>

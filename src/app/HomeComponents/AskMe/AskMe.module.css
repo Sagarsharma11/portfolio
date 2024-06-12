@@ -53,14 +53,15 @@ input[type]:focus{
   color: #A7FD39;
   gap: 1rem;
   cursor: pointer;
+  align-items: center;
 }
 .submit--container p:nth-child(1){
   font-weight: 800;
 }
-.submit--container p:nth-child(2):hover{
+/* .submit--container p:nth-child(2):hover{
   font-size: 18px;
   transition: all 0.7s;
-}
+} */
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   .AskMe--container {
