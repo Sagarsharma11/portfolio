@@ -40,16 +40,20 @@
     /* background-color: red; */
     color: white;
 }
+.experienceDesc ul{
+    padding: 0;
+}
 
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
     /* .workExperience--container{
         padding: 5rem 0rem 0rem 1rem;
     } */
     .workExperience--main--container{
-        padding: 5rem 1rem 0rem 1rem;
+        padding: 5rem 1rem 1rem 1rem;
     }
+
 }
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
     /* .workExperience--container{
         padding: 5rem 0rem 0rem 1rem;
     } */
@@ -65,7 +69,7 @@
         padding: 5rem 1rem 0rem 1rem;
     }
     .workExperience--container{
-        padding: 1rem 0rem 0rem 1rem;
+        padding: 1rem 0rem 1rem 1rem;
         /* background-color: var(--primary-color);
         border-radius: 0.875rem; */
     }

@@ -9,8 +9,11 @@ const AskMe = () => {
         <input required={true} type="email" placeholder="enter your email" />
         <textarea required={true} ></textarea>
         <div className={styles["submit--container"]}>
-          <p>{">>"}</p>
-          <p>Submit</p>
+        <div className={styles["btn-section"]}>
+            <button>
+              Send Mail
+            </button>
+          </div>
         </div>
       </div>
     </div>

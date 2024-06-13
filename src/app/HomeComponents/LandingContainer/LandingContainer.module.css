@@ -36,7 +36,39 @@
   display: flex;
   align-items: center;
 }
-
+.text--container .btn-section{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-left: 1rem;
+  gap: 1rem;
+}
+.text--container .btn-section button:nth-child(1){
+  padding: .7rem .5rem;
+  width: 10rem;
+  font-weight: 600;
+  color: white;
+  border: 1px solid #a7fd39;
+  border-radius: .5rem;
+  background-color: transparent;
+}
+.text--container .btn-section button:nth-child(2){
+  padding: .7rem .4rem;
+  width: 10rem;
+  font-weight: 600;
+  border-radius: .5rem;
+  background-color: #a7fd39;
+  border: 1px solid #a7fd39;
+}
+.text--container .btn-section button:nth-child(2) a
+{
+  color: #1f1f1f;
+  text-decoration: none;
+}
+.text--container .btn-section button:nth-child(1) a{
+  color: #fff;
+  text-decoration: none;
+}
 .text--container .textOne h2 {
   font-size: 4.375rem;
 }
@@ -68,7 +100,7 @@
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1200px) {
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
   .Landing--container {
     display: flex;
     padding: 0.5rem 2rem;
@@ -81,7 +113,7 @@
   }
 }
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
   .Landing--container {
     display: flex;
     padding: 0.5rem 2rem;

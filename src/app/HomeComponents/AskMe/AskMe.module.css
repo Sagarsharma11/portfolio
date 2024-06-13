@@ -58,6 +58,20 @@ input[type]:focus{
 .submit--container p:nth-child(1){
   font-weight: 800;
 }
+.btn-section{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.btn-section button:nth-child(1){
+  padding: .7rem .5rem;
+  width: 8rem;
+  font-weight: 600;
+  color: white;
+  border: 1px solid #a7fd39;
+  border-radius: .5rem;
+  background-color: transparent;
+}
 /* .submit--container p:nth-child(2):hover{
   font-size: 18px;
   transition: all 0.7s;
