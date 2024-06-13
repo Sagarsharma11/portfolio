@@ -39,6 +39,18 @@ const LandingContainer = () => {
             />
             {/* <p><Typewriter text="full stack develope" delay={100} />r</p> */}
           </div>
+          <div className={styles["btn-section"]}>
+            <button>
+              <a href="mailto:sagarsharmatech00@gmail.com">
+              Hire Me
+              </a>
+            </button>
+            <button>
+              <a href={"/pdf/sagar.pdf"} download={true}>
+              Download Resume
+              </a>
+            </button>
+          </div>
         </div>
       </div>
     </div>
