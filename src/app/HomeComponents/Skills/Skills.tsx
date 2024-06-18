@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Skills.module.css";
 import Card from "./components/Card";
-// import { iconData } from "./data/dataSets";
 import { FaHtml5 } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
@@ -13,6 +12,8 @@ import { SiMysql } from "react-icons/si";
 import { GrStorage } from "react-icons/gr";
 import { FaPython } from "react-icons/fa";
 import { FaAws } from "react-icons/fa";
+
+import { useRouter } from 'next/navigation';
 
 // Define the type for the icon components
 type IconComponentType = JSX.Element;
@@ -29,7 +30,7 @@ export const iconData: IconData[] = [
   { "Css3": <IoLogoCss3 size={70} /> },
   { "React JS": <FaReact size={70} /> },
   { "Next JS": <TbBrandNextjs size={70} /> },
-  { "Mysql": <SiMysql size={70} /> },
+  { "MySQL": <SiMysql size={70} /> },
   { "MongoDb": <GrStorage size={70} /> },
   { "Python": <FaPython size={70} /> },
   { "AWS": <FaAws size={70} /> },
@@ -42,10 +43,15 @@ type IconsType = {
 
 const Skills = () => {
   const [data, setData] = useState<any>([]);
+  const router = useRouter();
   useEffect(() => {
     fetchData();
   }, []);
 
+  const handleNavigation = (slug:any) => {
+    const { technologyName, technologyId } = slug;
+    router.push( `/topic/${technologyName}-${technologyId}`);
+  };
   const fetchData = async () => {
     try {
       const jsonResponse = await fetch(
@@ -54,22 +60,23 @@ const Skills = () => {
       );
       const response = await jsonResponse.json();
       // console.log(response);
-      setData(response?.data);
+      // setData(response?.data);
       let array: any[] = [];
       response?.data?.forEach((ele: any, index: number) => {
         let obj: IconsType = {};
-         obj = ele;
-        for(let i=0; i<iconData.length; i++ ){
-          if(ele.technologyName == Object.keys(iconData[i])){
+        obj = ele;
+        for (let i = 0; i < iconData.length; i++) {
+          if (ele.technologyName == Object.keys(iconData[i])) {
             obj.icons = iconData[i][Object.keys(iconData[i]) as any];
             array.push(obj)
           }
         }
-        setData(array);
-
+        console.log(array)
+        
         // console.log(ele);
       });
       // console.log(`array => ${array}`);
+      setData(array);
 
     } catch (error) {
       console.error(error);
@@ -80,8 +87,10 @@ const Skills = () => {
     <div className={styles["skills--container"]}>
       <h2 className={styles["title"]}>My Skills</h2>
       <div className={styles["card--container"]}>
-        {data.map((item:any, key:number) => (
-          <Card key={key} item={item} />
+        {data.map((item: any, key: number) => (
+          <div onClick={()=>handleNavigation(item)}>
+            <Card key={key} item={item} />
+          </div>
         ))}
       </div>
     </div>

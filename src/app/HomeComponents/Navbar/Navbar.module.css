@@ -14,8 +14,11 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  color: #a7fd39;
   transition: color 0.7s ease-in-out;
+}
+.navbar-items ul a{
+  color: #a7fd39;
+  text-decoration: none;
 }
 .navbar-items ul li{
   font-size: 1.225rem;

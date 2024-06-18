@@ -1,0 +1,28 @@
+.topics--mainContainer{
+    padding: 5rem 20rem 0rem 20rem;
+    padding: 5rem 5rem 0rem 4rem;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+    /* .skills--container{
+        padding: 5rem 1rem 0rem 1rem;
+    } */
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    /* .skills--container{
+        padding: 5rem 1rem 0rem 1rem;
+    }
+    .card--container{
+        gap: 1rem;
+    } */
+}
+
+@media only screen and (max-width: 480px) {
+    /* .skills--container{
+        padding: 5rem 1rem 0rem 1rem;
+    }
+    .card--container{
+        gap: 1rem;
+    } */
+}
