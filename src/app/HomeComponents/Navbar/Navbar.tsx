@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Icon from "../../Icon";
 import styles from "./Navbar.module.css";
 import Hamburger from "./Hamburger";
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -29,11 +30,31 @@ const Navbar = () => {
           </div>
           <div className={styles["navbar-items"]}>
             <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Posts</li>
-              <li>Blogs</li>
-              <li>Upcoming</li>
+              <li>
+                <Link href={"/"}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"}>
+                  Posts
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"}>
+                  Blogs
+                </Link>
+              </li>
+              <li>
+                <Link href={"/"}>
+                  Upcoming
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

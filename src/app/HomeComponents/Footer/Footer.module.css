@@ -50,7 +50,7 @@
 }
 .contentBox span{
   color: #38b6ff;
-  font-size: 22px;
+  /* font-size: 22px; */
 }
 .contentBox div:nth-child(2) .viewMore{
   text-decoration: underline;
