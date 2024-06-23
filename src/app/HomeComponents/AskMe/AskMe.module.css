@@ -1,5 +1,5 @@
 .AskMe--container {
-  padding: 5rem 20rem 5rem 20rem;
+  /* padding: 5rem 20rem 5rem 20rem; */
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -11,7 +11,7 @@
   color: var(--title-color);
 }
 .cards--container {
-  height: 400px;
+  height: auto;
   width: 100%;
   background-color: var(--main-theme);
   border-radius: 0.875rem;
@@ -24,10 +24,10 @@
 .cards--container input{
   height: 40px;
   width: 100%;
-  border-radius: 0.75rem ;
+  border-radius: 0.5rem ;
   border: 0.4px solid #A7FD39;
   font-size: 18px;
-  padding: 1rem;
+  padding: 1.5rem ;
 }
 .cards--container
 input[type]:focus{ 
@@ -37,7 +37,7 @@ input[type]:focus{
 } 
 
 .cards--container textarea{
-  height: 200px;
+  height: 10rem;
   border-radius: 0.75rem;
   border: 0.4px solid #A7FD39;
   padding: 1rem;
@@ -79,7 +79,7 @@ input[type]:focus{
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   .AskMe--container {
-    padding: 5rem 1rem 0rem 1rem;
+    /* padding: 5rem 1rem 0rem 1rem; */
     gap: 1rem;
   }
   .cards--container {
@@ -90,7 +90,7 @@ input[type]:focus{
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .AskMe--container {
-    padding: 5rem 1rem 0rem 1rem;
+    /* padding: 5rem 1rem 0rem 1rem; */
     gap: 1rem;
   }
   .cards--container {
@@ -101,7 +101,7 @@ input[type]:focus{
 
 @media only screen and (max-width: 480px) {
   .AskMe--container {
-    padding: 5rem 1rem 0rem 1rem;
+    /* padding: 5rem 1rem 0rem 1rem; */
     gap: 1rem;
   }
   .cards--container {

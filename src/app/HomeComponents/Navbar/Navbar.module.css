@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 20rem;
+  /* padding: 2rem 20rem; */
 }
 .navbar--container > div{
   cursor: pointer;
@@ -30,19 +30,19 @@
 
 @media only screen and (min-width: 1201px) and (max-width: 1600px) {
   .navbar--container {
-    padding: 0.5rem 4rem;
+    /* padding: 0.5rem 4rem; */
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   .navbar--container {
-    padding: 0.5rem 2rem;
+    /* padding: 0.5rem 2rem; */
   }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .navbar--container {
-    padding: 0.5rem 2rem;
+    /* padding: 0.5rem 2rem; */
   }
 }
 

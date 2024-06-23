@@ -4,6 +4,7 @@ import Icon from "../../Icon";
 import styles from "./Navbar.module.css";
 import Hamburger from "./Hamburger";
 import Link from 'next/link';
+import PrimaryLayout from "@/utils/components/PrimaryLayout";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -20,7 +21,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <>
+        <PrimaryLayout>
       {isMobile ? (
         <Hamburger />
       ) : (
@@ -59,7 +60,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
-    </>
+        </PrimaryLayout>
   );
 };
 

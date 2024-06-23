@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PrimaryLayout from '@/utils/components/PrimaryLayout';
 
 const Portfolio = () => {
   const data = [
@@ -99,6 +100,7 @@ const Portfolio = () => {
 
   ]
   return (
+    <PrimaryLayout>
     <div className={styles["Portfolio--container"]}>
       <h2 className={styles["title"]}>Portfolio</h2>
       <div className={styles["cards--container"]}>
@@ -135,6 +137,7 @@ const Portfolio = () => {
         </>
       </div>
     </div>
+    </PrimaryLayout>
   )
 }
 
