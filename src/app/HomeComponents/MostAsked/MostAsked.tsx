@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import styles from "./MostAsked.module.css"
+import PrimaryLayout from '@/utils/components/PrimaryLayout';
 
 const Contributions = () => {
   const [data, setData] = useState<any>([]);
@@ -11,7 +12,7 @@ const Contributions = () => {
   const fetchData = async () => {
     try {
       const jsonResponse = await fetch(
-        `https://sagar.alphaworldtech.com/most-asked-question`
+        `https://sagar.alphaworldtech.com/most-asked-question/getAllQuestion.php`
         // `${process.env.NEXT_PUBLIC_API}/most-asked-question`
       );
       const response = await jsonResponse.json();
@@ -22,6 +23,7 @@ const Contributions = () => {
     }
   };
   return (
+    <PrimaryLayout>
     <div className={styles["mostAsked--container"]}>
       <h2 className={styles["title"]}>Most Asked</h2>
       <div className={styles["links--container"]}>
@@ -32,6 +34,7 @@ const Contributions = () => {
         }
       </div>
     </div>
+    </PrimaryLayout>
   )
 }
 

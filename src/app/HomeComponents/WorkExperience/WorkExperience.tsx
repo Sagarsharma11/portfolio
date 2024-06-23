@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import styles from "./WorkExperience.module.css"
+import PrimaryLayout from '@/utils/components/PrimaryLayout';
 
 const WorkExperience = () => {
     const [sliceVal, setSliceValue] = useState(1);
@@ -41,33 +42,36 @@ const WorkExperience = () => {
     }
 
     return (
-        <div className={styles["workExperience--main--container"]}>
-            <div className={styles["workExperience--container"]}>
-                <h2 className={styles["title"]}>Work Experience</h2>
-                {
-                    data?.slice(0, sliceVal)?.map((ele, index) => (
-                        <div key={index} className={styles["experience"]}>
-                            <small>{ele.duration}</small>
-                            <h4>{ele.companyName}</h4>
-                            <small>{ele.designation}</small>
-                            {/* <h4>{ele.aboutCompany}</h4> */}
-                            <div className={styles["experienceDesc"]}>
-                                <ul>
-                                    {
-                                        ele.establishment.map((item, key) => (
-                                            <li key={key}>{item}</li>
-                                        ))}
-                                </ul>
-                            </div>
-                        </div>
-                    ))
-                }
-                <small onClick={handleShow} className={styles["hideShow"]}>
+        <PrimaryLayout>
+
+            <div className={styles["workExperience--main--container"]}>
+                <div className={styles["workExperience--container"]}>
+                    <h2 className={styles["title"]}>Work Experience</h2>
                     {
-                        sliceVal <= 1 ? "show more" : "hide"
-                    } </small>
+                        data?.slice(0, sliceVal)?.map((ele, index) => (
+                            <div key={index} className={styles["experience"]}>
+                                <small>{ele.duration}</small>
+                                <h4>{ele.companyName}</h4>
+                                <small>{ele.designation}</small>
+                                {/* <h4>{ele.aboutCompany}</h4> */}
+                                <div className={styles["experienceDesc"]}>
+                                    <ul>
+                                        {
+                                            ele.establishment.map((item, key) => (
+                                                <li key={key}>{item}</li>
+                                            ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        ))
+                    }
+                    <small onClick={handleShow} className={styles["hideShow"]}>
+                        {
+                            sliceVal <= 1 ? "Show more" : "Show less"
+                        } </small>
+                </div>
             </div>
-        </div>
+        </PrimaryLayout>
     )
 }
 

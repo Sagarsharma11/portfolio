@@ -1,5 +1,5 @@
 .mostAsked--container {
-  padding: 5rem 20rem 0rem 20rem;
+  /* padding: 5rem 20rem 0rem 20rem; */
 }
 .title {
   font-size: 2rem;
@@ -28,7 +28,7 @@
 }
 @media only screen and (max-width: 480px) {
   .mostAsked--container {
-    padding: 5rem 1rem 0rem 1rem;
+    /* padding: 5rem 1rem 0rem 1rem; */
     gap: 1rem;
   }
   .links--container div {
@@ -40,16 +40,16 @@
 
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   .mostAsked--container {
-    padding: 5rem 1rem 0rem 1rem;
+    /* padding: 5rem 1rem 0rem 1rem; */
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .mostAsked--container {
-    padding: 5rem 1rem 0rem 1rem;
+    /* padding: 5rem 1rem 0rem 1rem; */
   }
 }
 @media only screen and (max-width: 480px) {
   .mostAsked--container {
-    padding: 5rem 1rem 0rem 1rem;
+    /* padding: 5rem 1rem 0rem 1rem; */
   }
 }

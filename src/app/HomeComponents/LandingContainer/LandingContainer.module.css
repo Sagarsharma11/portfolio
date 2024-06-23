@@ -6,7 +6,7 @@
 
 .Landing--container {
   display: flex;
-  padding: 0.5rem 19rem;
+  /* padding: 0.5rem 19rem; */
 }
 
 .svg--container {
@@ -47,30 +47,29 @@
   padding: .7rem .5rem;
   width: 10rem;
   font-weight: 600;
-  color: white;
   border: 1px solid #a7fd39;
   border-radius: .5rem;
-  background-color: transparent;
+  background-color: #a7fd39;
 }
 .text--container .btn-section button:nth-child(2){
   padding: .7rem .4rem;
   width: 10rem;
   font-weight: 600;
   border-radius: .5rem;
-  background-color: #a7fd39;
+  background-color: transparent;
   border: 1px solid #a7fd39;
 }
 .text--container .btn-section button:nth-child(2) a
 {
-  color: #1f1f1f;
+  color: #a7fd39;
   text-decoration: none;
 }
 .text--container .btn-section button:nth-child(1) a{
-  color: #fff;
+  color: #1f1f1f;
   text-decoration: none;
 }
 .text--container .textOne h2 {
-  font-size: 4.375rem;
+  font-size: 3rem;
 }
 
 
@@ -90,7 +89,7 @@
 @media only screen and (min-width: 1201px) and (max-width: 1600px) {
   .Landing--container {
     display: flex;
-    padding: 0.5rem 4rem;
+    /* padding: 0.5rem 4rem; */
   }
 
   .Landing--container {
@@ -103,7 +102,7 @@
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
   .Landing--container {
     display: flex;
-    padding: 0.5rem 2rem;
+    /* padding: 0.5rem 2rem; */
   }
 
   .Landing--container {
@@ -116,7 +115,7 @@
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
   .Landing--container {
     display: flex;
-    padding: 0.5rem 2rem;
+    /* padding: 0.5rem 2rem; */
     flex-direction: column;
     justify-content: center;
     align-items: center;

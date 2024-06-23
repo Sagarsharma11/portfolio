@@ -14,6 +14,7 @@ import { FaPython } from "react-icons/fa";
 import { FaAws } from "react-icons/fa";
 
 import { useRouter } from 'next/navigation';
+import PrimaryLayout from "@/utils/components/PrimaryLayout";
 
 // Define the type for the icon components
 type IconComponentType = JSX.Element;
@@ -48,9 +49,9 @@ const Skills = () => {
     fetchData();
   }, []);
 
-  const handleNavigation = (slug:any) => {
+  const handleNavigation = (slug: any) => {
     const { technologyName, technologyId } = slug;
-    router.push( `/topic/${technologyName}-${technologyId}`);
+    router.push(`/topic/${technologyName}-${technologyId}`);
   };
   const fetchData = async () => {
     try {
@@ -72,7 +73,7 @@ const Skills = () => {
           }
         }
         console.log(array)
-        
+
         // console.log(ele);
       });
       // console.log(`array => ${array}`);
@@ -84,16 +85,18 @@ const Skills = () => {
   };
 
   return (
-    <div className={styles["skills--container"]}>
-      <h2 className={styles["title"]}>My Skills</h2>
-      <div className={styles["card--container"]}>
-        {data.map((item: any, key: number) => (
-          <div onClick={()=>handleNavigation(item)}>
-            <Card key={key} item={item} />
-          </div>
-        ))}
+    <PrimaryLayout>
+      <div className={styles["skills--container"]}>
+        <h2 className={styles["title"]}>My Skills</h2>
+        <div className={styles["card--container"]}>
+          {data.map((item: any, key: number) => (
+            <div onClick={() => handleNavigation(item)}>
+              <Card key={key} item={item} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </PrimaryLayout>
   );
 };
 

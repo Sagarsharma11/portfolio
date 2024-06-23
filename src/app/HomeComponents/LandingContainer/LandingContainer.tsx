@@ -4,13 +4,16 @@ import styles from "./LandingContainer.module.css";
 import RightSideIcon from "./components/RightSideIcon";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { TypeAnimation } from "react-type-animation";
+import PrimaryLayout from "@/utils/components/PrimaryLayout";
 
 
 const LandingContainer = () => {
   return (
+    <PrimaryLayout>
     <div className={styles["Landing--container"]}>
       <div className={styles["svg--container"]}>
-        <RightSideIcon />
+        {/* <RightSideIcon /> */}
+        <img src="/image/landingPagePicture.png" alt="right side logo" />
       </div>
       <div className={styles["text--container"]}>
         <div className={styles["innerContainer"]}>
@@ -34,7 +37,7 @@ const LandingContainer = () => {
               ]}
               wrapper="span"
               speed={50}
-              style={{ fontSize: "1.875rem", display: "inline-block" }}
+              style={{ fontSize: "1.575rem", display: "inline-block" }}
               repeat={Infinity}
             />
             {/* <p><Typewriter text="full stack develope" delay={100} />r</p> */}
@@ -54,6 +57,7 @@ const LandingContainer = () => {
         </div>
       </div>
     </div>
+    </PrimaryLayout>
   );
 };
 

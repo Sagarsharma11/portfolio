@@ -1,5 +1,5 @@
 .RecentExplore--container {
-  padding: 5rem 20rem 0rem 20rem;
+  /* padding: 5rem 20rem 0rem 20rem; */
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -76,7 +76,7 @@
 }
 @media only screen and (min-width: 769px) and (max-width: 1200px) {
   .RecentExplore--container {
-    padding: 5rem 1rem 0rem 1rem;
+    /* padding: 5rem 1rem 0rem 1rem; */
     gap: 1rem;
   }
   .console--container pre {
@@ -94,7 +94,7 @@
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
   .RecentExplore--container {
-    padding: 5rem 1rem 0rem 1rem;
+    /* padding: 5rem 1rem 0rem 1rem; */
     gap: 1rem;
   }
   .console--container pre {
@@ -112,7 +112,7 @@
 }
 @media only screen and (max-width: 480px) {
   .RecentExplore--container {
-    padding: 5rem 1rem;
+    /* padding: 5rem 1rem; */
     gap: 1rem;
   }
   .console--container pre {
@@ -120,7 +120,7 @@
     font-weight: 300;
   }
   .console--container {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0rem;
   }
   .cards--container {
     display: flex;

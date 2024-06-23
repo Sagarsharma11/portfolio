@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from "./Contributions.module.css"
+import PrimaryLayout from '@/utils/components/PrimaryLayout'
 
 const Contributions = () => {
   const data = [
@@ -25,6 +26,7 @@ const Contributions = () => {
     },
   ]
   return (
+    <PrimaryLayout>
     <div className={styles["contributions--main--container"]}>
       <div className={styles["contributions--container"]}>
         <h2 className={styles["title"]}>Contributions</h2>
@@ -38,6 +40,7 @@ const Contributions = () => {
         </div>
       </div>
     </div>
+    </PrimaryLayout>
   )
 }
 
