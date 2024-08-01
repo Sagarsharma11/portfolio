@@ -8,20 +8,44 @@ import PrimaryLayout from "@/utils/components/PrimaryLayout";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     // setIsMobile(window.innerWidth < 481);
+  //     setIsMobile(window.innerWidth / window.devicePixelRatio <= 481);
+  //   };
+  //   console.log("window width ", window.innerWidth);
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
+
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
+
   useEffect(() => {
     const handleResize = () => {
-      // setIsMobile(window.innerWidth < 481);
       setIsMobile(window.innerWidth / window.devicePixelRatio <= 481);
     };
-    console.log("window width ", window.innerWidth);
-    handleResize();
-    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    let debounceTimer:any;
+    const debouncedResize = () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        window.requestAnimationFrame(handleResize);
+      }, 100);
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener("resize", debouncedResize);
+
+    return () => {
+      clearTimeout(debounceTimer);
+      window.removeEventListener("resize", debouncedResize);
+    };
   }, []);
 
+
+
   return (
-        <PrimaryLayout>
+        <div className={styles["navbar--container--primary--spacing"]}>
       {isMobile ? (
         <Hamburger />
       ) : (
@@ -60,7 +84,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
-        </PrimaryLayout>
+        </div>
   );
 };
 

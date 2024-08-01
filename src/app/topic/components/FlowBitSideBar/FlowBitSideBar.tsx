@@ -1,38 +1,45 @@
 "use client";
-import React from 'react'
-import { Sidebar } from "flowbite-react";
-import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser, HiViewBoards } from "react-icons/hi";
-
-
+import styles from "./FlowBitSideBar.module.css";
+import { FaCircle } from "react-icons/fa";
 export const FlowBitSideBar = () => {
-    return (
+  const htmlTopics = [
+    "Introduction to HTML",
+    "HTML Document Structure",
+    "HTML Elements",
+    "HTML Attributes",
+    "HTML Headings",
+    "HTML Paragraphs",
+    "HTML Text Formatting",
+    "HTML Lists",
+    "HTML Links",
+    "HTML Images",
+    "HTML Tables",
+    "HTML Forms",
+    "HTML Input Types",
+    "HTML Multimedia",
+    "HTML Semantics",
+    "HTML Block and Inline Elements",
+    "HTML Class and Id Attributes",
+    "HTML Styles",
+    "HTML Scripts",
+    "HTML Entities",
+    "HTML5 New Elements",
+    "HTML5 Semantic Elements",
+    "HTML5 Forms",
+    "HTML5 APIs",
+    "HTML Accessibility",
+    "HTML Best Practices",
+  ];
 
-        <Sidebar aria-label="Default sidebar example">
-            <Sidebar.Items>
-                <Sidebar.ItemGroup>
-                    <Sidebar.Item href="#" icon={HiChartPie}>
-                        Dashboard
-                    </Sidebar.Item>
-                    <Sidebar.Item href="#" icon={HiViewBoards} label="Pro" labelColor="dark">
-                        Kanban
-                    </Sidebar.Item>
-                    <Sidebar.Item href="#" icon={HiInbox} label="3">
-                        Inbox
-                    </Sidebar.Item>
-                    <Sidebar.Item href="#" icon={HiUser}>
-                        Users
-                    </Sidebar.Item>
-                    <Sidebar.Item href="#" icon={HiShoppingBag}>
-                        Products
-                    </Sidebar.Item>
-                    <Sidebar.Item href="#" icon={HiArrowSmRight}>
-                        Sign In
-                    </Sidebar.Item>
-                    <Sidebar.Item href="#" icon={HiTable}>
-                        Sign Up
-                    </Sidebar.Item>
-                </Sidebar.ItemGroup>
-            </Sidebar.Items>
-        </Sidebar>
-    )
-}
+
+  return (
+    <div className={styles.sideBarMainContainer}>
+      {htmlTopics.map((ele, key) => (
+        <p title={ele}>
+          {/* <FaCircle size={18} /> */}
+          {ele.length <= 20?ele:ele.slice(0,20)+".."}
+        </p>
+      ))}
+    </div>
+  );
+};

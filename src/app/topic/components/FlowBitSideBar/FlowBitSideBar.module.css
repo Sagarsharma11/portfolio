@@ -1,0 +1,41 @@
+.sideBarMainContainer {
+  max-height: 90vh;
+  width: 35rem;
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 1rem;
+  cursor: pointer;
+  position: sticky;
+  top: 5rem;
+  z-index: 1;
+}
+
+.sideBarMainContainer p {
+  display: flex;
+  gap: 1rem;
+  color: var(--title-color);
+}
+
+.sideBarMainContainer::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.sideBarMainContainer::-webkit-scrollbar-track {
+  background-color: var(--primary-color); /* Match the background color */
+  border-radius: 0.3rem; /* Optional: round the scrollbar track ends */
+}
+
+.sideBarMainContainer::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 0.3rem; /* Match the scrollbar thumb with track */
+}
+
+/* Handle on hover */
+.sideBarMainContainer::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}

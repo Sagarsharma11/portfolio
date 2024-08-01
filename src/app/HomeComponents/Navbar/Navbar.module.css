@@ -1,12 +1,25 @@
+.navbar--container--primary--spacing{
+  background-color: var(--main-theme);
+  padding: 0.5rem 19rem;
+  position: sticky;
+  top: 0rem;
+  z-index: 1;
+}
+
 .navbar--container {
   background-color: var(--main-theme);
   display: flex;
   justify-content: space-between;
   align-items: center;
+/* border: 1px solid red; */
   /* padding: 2rem 20rem; */
 }
 .navbar--container > div{
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
 }
 .navbar-items ul {
   display: flex;

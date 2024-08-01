@@ -22,6 +22,10 @@
   margin-top: 2rem;
   color: #a7fd39;
 }
+.navbarItems  a{
+  color: #a7fd39;
+  text-decoration: none;
+}
 
 @keyframes openMenu {
     from {
@@ -84,9 +88,6 @@
     animation-play-state: running;
   }
 
-.navbar-items ul{
-
-}
 .navbar-items ul li{
     cursor: pointer;
 }

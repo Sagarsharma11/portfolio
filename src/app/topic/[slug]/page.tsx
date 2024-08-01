@@ -1,37 +1,40 @@
-"use client"
-import Navbar from '@/app/HomeComponents/Navbar/Navbar';
-import React, { useState, useEffect } from 'react'
-import styles from "./topics.module.css"
-import SideBar from '../components/SideBar/SideBar';
-import { FlowBitSideBar } from '../components/FlowBitSideBar/FlowBitSideBar';
-import ContentArea from '../components/ContentArea/ContentArea';
+"use client";
+import Navbar from "@/app/HomeComponents/Navbar/Navbar";
+import React, { useState, useEffect } from "react";
+import styles from "./topics.module.css";
+// import SideBar from '../components/SideBar/SideBar';
+import { FlowBitSideBar } from "../components/FlowBitSideBar/FlowBitSideBar";
+import ContentArea from "../components/ContentArea/ContentArea";
+import PrimaryLayout from "@/utils/components/PrimaryLayout";
 // import { useRouter } from 'next/router';
 
 const page = ({ params }: any) => {
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
   const { slug } = params;
   const technologyId = slug?.split("-")[1];
 
   useEffect(() => {
     fetchData();
-  }, [])
-
+  }, []);
 
   const fetchData = async () => {
     try {
       const requestOptions = {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          id: technologyId
-        })
+          id: technologyId,
+        }),
       };
 
       console.log("Request Options:", requestOptions);
 
-      const response = await fetch(`http://localhost/portfolio-backend/Posts/getPostsById.php`, requestOptions);
+      const response = await fetch(
+        `http://localhost/portfolio-backend/Posts/getPostsById.php`,
+        requestOptions
+      );
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
@@ -48,12 +51,17 @@ const page = ({ params }: any) => {
   return (
     <>
       <Navbar />
+      <div className={styles["black--border"]}>
+
+      </div>
       <div className={styles["topics--mainContainer"]}>
+        {/* <PrimaryLayout> */}
         <FlowBitSideBar />
         <ContentArea />
+        {/* </PrimaryLayout> */}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default page
+export default page;
