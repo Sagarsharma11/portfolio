@@ -1,5 +1,5 @@
 "use client";
-import Navbar from "@/app/HomeComponents/Navbar/Navbar";
+import Navbar from "@/app/components/Navbar/Navbar";
 import React, { useState, useEffect } from "react";
 import styles from "./topics.module.css";
 // import SideBar from '../components/SideBar/SideBar';
@@ -51,15 +51,13 @@ const page = ({ params }: any) => {
   return (
     <>
       <Navbar />
-      <div className={styles["black--border"]}>
-
-      </div>
-      <div className={styles["topics--mainContainer"]}>
-        {/* <PrimaryLayout> */}
-        <FlowBitSideBar />
-        <ContentArea />
-        {/* </PrimaryLayout> */}
-      </div>
+      <div className={styles["black--border"]}></div>
+      <PrimaryLayout>
+        <div className={styles["topics--mainContainer"]}>
+          <FlowBitSideBar />
+          <ContentArea />
+        </div>
+      </PrimaryLayout>
     </>
   );
 };

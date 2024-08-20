@@ -164,4 +164,12 @@
     justify-content: unset;
     align-items: unset;
   }
+
+  .text--container .btn-section{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-left: 0rem;
+    gap: 1rem;
+  }
 }

@@ -23,13 +23,15 @@
   background-color: var(--primary-color);
   border-radius: 0.875rem;
   display: flex;
-  padding: 2rem 1rem 3rem 2rem;
+  padding: 1rem;
+  /* padding: 2rem 1rem 3rem 2rem; */
   /* overflow-y: scroll; */
   position: relative;
 }
 .console--container ::-webkit-scrollbar {
   width: 0.3rem;
 
+  height: 0.1rem;
 }
 
 .console--container ::-webkit-scrollbar-track {
@@ -40,6 +42,7 @@
 /* Handle */
 .console--container ::-webkit-scrollbar-thumb {
   background: var(--neon-color); 
+  /* background: #97e433; */
 }
 
 /* Handle on hover */
@@ -51,7 +54,8 @@
   flex: 1;
   font-size: 1.125rem;
   font-weight: 500;
-  padding-bottom: 4rem;
+  /* padding-bottom: 4rem; */
+  padding: 1rem;
 }
 
 .console--container

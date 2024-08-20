@@ -26,6 +26,7 @@
   flex-direction: column;
   justify-content: center;
   padding:  1rem 0;
+  gap: 1rem;
 }
 .contentBox div:nth-child(1) {
   display: flex;
@@ -46,7 +47,7 @@
   font-weight:400;
   font-size: 1rem;
 
-  letter-spacing: 0.1rem;
+  /* letter-spacing: 0.1rem; */
   /* padding: 1rem 2rem 0 2rem; */
 }
 .contentBox span{
@@ -129,6 +130,7 @@
   }
   .footer-inner-container {
     flex-direction: column;
+    gap: 0rem;
   }
   .contentBox div:nth-child(1) h2{
     font-weight:400;
