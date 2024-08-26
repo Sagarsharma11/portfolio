@@ -1,14 +1,10 @@
-
-
 .topics--mainContainer{
-    /* padding: 0rem 19rem 0rem 19rem; */
-    /* padding: 5rem 5rem 0rem 4rem; */
     display: flex;
-    /* margin-top: 2rem; */
     gap: 2rem;
 }
 .black--border{
-    background-color: var(--main-theme);
+    /* background-color: var(--main-theme); */
+    background-color: transparent;
     height: 2rem;
     width: 100%;
     position: sticky;
@@ -21,22 +17,13 @@
     /* .skills--container{
         padding: 5rem 1rem 0rem 1rem;
     } */
+    .topics--mainContainer{
+        display: flex;
+        gap: 1rem;
+    }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-    /* .skills--container{
-        padding: 5rem 1rem 0rem 1rem;
-    }
-    .card--container{
-        gap: 1rem;
-    } */
+
 }
 
-@media only screen and (max-width: 480px) {
-    /* .skills--container{
-        padding: 5rem 1rem 0rem 1rem;
-    }
-    .card--container{
-        gap: 1rem;
-    } */
-}

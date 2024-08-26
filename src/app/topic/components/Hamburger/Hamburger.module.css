@@ -1,0 +1,94 @@
+.navbar--container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+.iconContainer{
+    padding-left: 1rem;
+    position: relative;
+}
+.hamburgerContainer{
+    padding-right: 1rem;
+}
+.navbarItems{
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  color: #a7fd39;
+}
+.navbarItems  a{
+  color: #a7fd39;
+  text-decoration: none;
+}
+
+@keyframes openMenu {
+    from {
+      transform: scaleX(0); 
+    }
+    
+    to {
+      transform: scaleX(1); 
+    }
+  }
+
+  @keyframes closeMenu {
+    from {
+      transform: scaleX(1); 
+    }
+    
+    to {
+      transform: scaleX(0); 
+    }
+  }
+  
+  .itemsContainer {
+    position: absolute;
+    height: 100vh;
+    width: 290px;
+    left: -1rem;
+    top: 1px;
+    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    transform: scaleX(0); 
+    transform-origin: left; 
+  }
+  
+  .menuOpen {
+    animation-name: openMenu;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    overflow-y: scroll;
+    padding-bottom: 8rem;
+  }
+  .menuClose {
+    animation-name: closeMenu;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+
+.navbar-items ul li{
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 480px) {
+  
+  .navbar--container{
+    padding: 0.5rem 1rem;
+  }
+}

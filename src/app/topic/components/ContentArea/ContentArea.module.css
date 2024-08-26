@@ -33,3 +33,16 @@
   padding: 0.2rem;
   border-radius: 4px;
 }
+
+@media only screen and (max-width: 480px) {
+  
+  .contentArea{
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .contentArea{
+    width: 100%;
+  }
+}
