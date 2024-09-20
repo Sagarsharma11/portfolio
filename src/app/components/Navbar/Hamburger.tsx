@@ -27,9 +27,9 @@ const Hamburger = () => {
               <Link href={"/"}>
               <li>blog</li>
               </Link>
-              <Link href={"/"}>
-              <li>upcoming</li>
-              </Link>
+              <a  href="https://devloper-stream.vercel.app/" target="_blank">
+              <li>Dev Stream</li>
+              </a>
             </ul>
           </div>
         </div>
