@@ -15,13 +15,13 @@ export default function Home() {
     <main className={styles.mainContainer}>
         <Navbar/>
         <LandingContainer/>
-        <Skills/>
+        {/* <Skills/> */}
         <WorkExperience/>
         <Contributions/>
         <Portfolio/>
         <RecentExplore/>
         <AskMe/>
-        <MostAsked/>
+        {/* <MostAsked/> */}
         <Footer/>
     </main>
   );
