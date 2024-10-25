@@ -12,7 +12,8 @@ const Contributions = () => {
   const fetchData = async () => {
     try {
       const jsonResponse = await fetch(
-        `Technology/getAllTechnology.php/most-asked-question/getAllQuestion.php`
+        `https://sagar.reticulumeducon.com/most-asked-question/getAllQuestion.php`
+        // `Technology/getAllTechnology.php/most-asked-question/getAllQuestion.php`
         // `https://sagar.alphaworldtech.com/most-asked-question/getAllQuestion.php`
         // `${process.env.NEXT_PUBLIC_API}/most-asked-question`
       );
