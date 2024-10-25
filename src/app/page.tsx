@@ -9,7 +9,7 @@ import AskMe from "./HomeComponents/AskMe/AskMe";
 import MostAsked from "./HomeComponents/MostAsked/MostAsked";
 import Footer from "./components/Footer/Footer"
 import WorkExperience from "./HomeComponents/WorkExperience/WorkExperience";
-
+// this is faltu commment
 export default function Home() {
   return (
     <main className={styles.mainContainer}>
