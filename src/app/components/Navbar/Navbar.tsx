@@ -55,7 +55,7 @@ const Navbar = () => {
                 <Link href={"/"}>Blogs</Link>
               </li>
               <li>
-                <a  href="https://devloper-stream.vercel.app/" target="_blank">Dev Stream</a>
+                <a  href="https://developer-stream.vercel.app/" target="_blank">Dev Stream</a>
               </li>
             </ul>
           </div>
