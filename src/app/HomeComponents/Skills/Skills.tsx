@@ -56,7 +56,8 @@ const Skills = () => {
   const fetchData = async () => {
     try {
       const jsonResponse = await fetch(
-        `https://sagar.alphaworldtech.com/Technology/getAllTechnology.php`
+        `https://sagar.reticulumeducon.com/Technology/getAllTechnology.php`
+        // `https://sagar.alphaworldtech.com/Technology/getAllTechnology.php`
         // `${process.env.NEXT_PUBLIC_API}/Technology/getAllTechnology.php`
       );
       const response = await jsonResponse.json();
