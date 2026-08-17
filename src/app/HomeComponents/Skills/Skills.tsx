@@ -1,102 +1,65 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import styles from "./Skills.module.css";
-import Card from "./components/Card";
-import { FaHtml5 } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
-import { IoLogoCss3 } from "react-icons/io5";
-import { FaReact } from "react-icons/fa";
-import { TbBrandNextjs } from "react-icons/tb";
-import { SiMysql } from "react-icons/si";
-import { GrStorage } from "react-icons/gr";
-import { FaPython } from "react-icons/fa";
-import { FaAws } from "react-icons/fa";
+import React from "react";
+import Section from "@/utils/components/Section";
+import Reveal from "@/utils/components/Reveal";
 
-import { useRouter } from 'next/navigation';
-import PrimaryLayout from "@/utils/components/PrimaryLayout";
-
-// Define the type for the icon components
-type IconComponentType = JSX.Element;
-
-type IconData = {
-  [key: string]: IconComponentType;
-};
-
-
-export const iconData: IconData[] = [
-  { "HTML5": <FaHtml5 size={70} /> },
-  { "Node JS": <FaNodeJs size={70} /> },
-  { "Express JS": <SiExpress size={70} /> },
-  { "Css3": <IoLogoCss3 size={70} /> },
-  { "React JS": <FaReact size={70} /> },
-  { "Next JS": <TbBrandNextjs size={70} /> },
-  { "MySQL": <SiMysql size={70} /> },
-  { "MongoDb": <GrStorage size={70} /> },
-  { "Python": <FaPython size={70} /> },
-  { "AWS": <FaAws size={70} /> },
+const SKILL_GROUPS = [
+  { title: "Languages", items: ["JavaScript (ES6+)", "TypeScript", "Python", "SQL"] },
+  {
+    title: "Frontend",
+    items: ["React.js", "Next.js", "Redux", "Tailwind CSS", "Bootstrap", "Material UI", "d3.js", "HTML5", "CSS3"],
+  },
+  {
+    title: "Backend",
+    items: ["Node.js", "Express.js", "NestJS", "GraphQL", "REST APIs", "WebSocket", "FastAPI", "Microservices"],
+  },
+  {
+    title: "AI & ML",
+    items: [
+      "RAG Pipelines",
+      "LLM Integration (OpenAI, Claude)",
+      "Text Embeddings",
+      "Vector DBs (Pinecone, pgvector, Weaviate)",
+      "MCP",
+      "Semantic Search",
+      "Multi-Agent AI",
+    ],
+  },
+  { title: "Databases", items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
+  { title: "Cloud & DevOps", items: ["AWS (EC2, S3)", "Docker", "Kafka", "Nginx", "CI/CD"] },
+  {
+    title: "Testing & Tools",
+    items: ["Jest", "Mocha", "Chai", "React Testing Library", "Git", "GitHub", "JIRA", "JWT", "Agile/Scrum"],
+  },
 ];
 
-type IconsType = {
-  icons?: IconComponentType;
-};
-
-
 const Skills = () => {
-  const [data, setData] = useState<any>([]);
-  const router = useRouter();
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const handleNavigation = (slug: any) => {
-    const { technologyName, technologyId } = slug;
-    router.push(`/topic/${technologyName}-${technologyId}`);
-  };
-  const fetchData = async () => {
-    try {
-      const jsonResponse = await fetch(
-        `https://sagar.alphaworldtech.com/Technology/getAllTechnology.php`
-        // `${process.env.NEXT_PUBLIC_API}/Technology/getAllTechnology.php`
-      );
-      const response = await jsonResponse.json();
-      // console.log(response);
-      // setData(response?.data);
-      let array: any[] = [];
-      response?.data?.forEach((ele: any, index: number) => {
-        let obj: IconsType = {};
-        obj = ele;
-        for (let i = 0; i < iconData.length; i++) {
-          if (ele.technologyName == Object.keys(iconData[i])) {
-            obj.icons = iconData[i][Object.keys(iconData[i]) as any];
-            array.push(obj)
-          }
-        }
-        console.log(array)
-
-        // console.log(ele);
-      });
-      // console.log(`array => ${array}`);
-      setData(array);
-
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
   return (
-    <PrimaryLayout>
-      <div className={styles["skills--container"]}>
-        <h2 className={styles["title"]}>My Skills</h2>
-        <div className={styles["card--container"]}>
-          {data.map((item: any, key: number) => (
-            <div onClick={() => handleNavigation(item)}>
-              <Card key={key} item={item} />
+    <Section id="skills">
+      <Reveal>
+        <p className="text-sm font-medium uppercase tracking-widest text-indigo-400">Stack</p>
+        <h2 className="mt-2 text-3xl font-bold text-neutral-50 sm:text-4xl">Skills</h2>
+      </Reveal>
+
+      <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {SKILL_GROUPS.map((group, index) => (
+          <Reveal delayMs={index * 60} key={group.title}>
+            <div className="h-full rounded-xl border border-border bg-surface p-6">
+              <h3 className="font-semibold text-neutral-50">{group.title}</h3>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-border px-3 py-1 text-xs text-neutral-400"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
+          </Reveal>
+        ))}
       </div>
-    </PrimaryLayout>
+    </Section>
   );
 };
 

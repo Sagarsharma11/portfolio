@@ -1,67 +1,65 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Icon from "../../Icon";
-import styles from "./Navbar.module.css";
-import Hamburger from "./Hamburger";
-import Link from 'next/link';
+import React, { useState } from "react";
+import { HiMenu, HiX } from "react-icons/hi";
+
+const NAV_LINKS = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Navbar = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const [hasMounted, setHasMounted] = useState(false); // Track if component has mounted
-
-  useEffect(() => {
-    setHasMounted(true); // Component has mounted
-
-    const handleResize = () => {
-      const mobileThreshold = 481;
-      setIsMobile(window.innerWidth < mobileThreshold);
-    };
-
-    // Check window size on mount (client-side only)
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  // Return null if the component hasn't mounted yet to avoid hydration error
-  if (!hasMounted) {
-    return null;
-  }
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={styles["navbar--container--primary--spacing"]}>
-      {isMobile ? (
-        <Hamburger />
-      ) : (
-        <div className={styles["navbar--container"]}>
-          <div>
-            <Icon />
-          </div>
-          <div className={styles["navbar-items"]}>
-            <ul>
-              <li>
-                <Link href={"/"}>Home</Link>
-              </li>
-              <li>
-                <Link href={"/"}>About</Link>
-              </li>
-              <li>
-                <Link href={"/"}>Posts</Link>
-              </li>
-              <li>
-                <Link href={"/"}>Blogs</Link>
-              </li>
-              <li>
-                <a  href="https://developer-stream.vercel.app/" target="_blank">Dev Stream</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <header className="sticky top-0 z-50 border-b border-border/80 bg-canvas/80 backdrop-blur">
+      <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4 sm:px-10 lg:px-12">
+        <a href="#home" className="text-lg font-semibold tracking-tight text-neutral-50">
+          Sagar<span className="text-gradient">.</span>
+        </a>
+
+        <ul className="hidden items-center gap-8 md:flex">
+          {NAV_LINKS.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className="text-sm text-neutral-400 transition-colors hover:text-neutral-50"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <button
+          type="button"
+          aria-label="Toggle menu"
+          className="text-neutral-100 md:hidden"
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
+          {isOpen ? <HiX size={26} /> : <HiMenu size={26} />}
+        </button>
+      </nav>
+
+      {isOpen && (
+        <ul className="flex flex-col gap-1 border-t border-border/80 bg-canvas px-6 pb-4 md:hidden">
+          {NAV_LINKS.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="block py-3 text-sm text-neutral-300 transition-colors hover:text-neutral-50"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
       )}
-    </div>
+    </header>
   );
 };
 

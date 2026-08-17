@@ -1,28 +1,25 @@
-import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
-import LandingContainer from "./HomeComponents/LandingContainer/LandingContainer";
+import Hero from "./HomeComponents/Hero/Hero";
+import About from "./HomeComponents/About/About";
+import Experience from "./HomeComponents/Experience/Experience";
 import Skills from "./HomeComponents/Skills/Skills";
-import Contributions from "./HomeComponents/Contributions/Contributions";
-import Portfolio from "./HomeComponents/Portfolio/Portfolio";
-import RecentExplore from "./HomeComponents/RecentExplore/RecentExplore";
-import AskMe from "./HomeComponents/AskMe/AskMe";
-import MostAsked from "./HomeComponents/MostAsked/MostAsked";
-import Footer from "./components/Footer/Footer"
-import WorkExperience from "./HomeComponents/WorkExperience/WorkExperience";
-// this is faltu commment
+import Projects from "./HomeComponents/Projects/Projects";
+import Education from "./HomeComponents/Education/Education";
+import Contact from "./HomeComponents/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+
 export default function Home() {
   return (
-    <main className={styles.mainContainer}>
-        <Navbar/>
-        <LandingContainer/>
-        {/* <Skills/> */}
-        <WorkExperience/>
-        <Contributions/>
-        <Portfolio/>
-        <RecentExplore/>
-        <AskMe/>
-        {/* <MostAsked/> */}
-        <Footer/>
+    <main>
+      <Navbar />
+      <Hero />
+      <About />
+      <Experience />
+      <Skills />
+      <Projects />
+      <Education />
+      <Contact />
+      <Footer />
     </main>
   );
 }

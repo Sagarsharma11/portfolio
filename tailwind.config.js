@@ -1,19 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/flowbite-react/lib/**/*.js",
-    "./pages/**/*.{ts,tsx}",
-    "./public/**/*.html",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        canvas: "#09090b",
+        surface: "#131316",
+        border: "#232328",
+        accent: {
+          from: "#818cf8",
+          to: "#c084fc",
+        },
+      },
+      backgroundImage: {
+        "accent-gradient": "linear-gradient(135deg, #818cf8 0%, #c084fc 100%)",
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "sans-serif"],
+      },
+    },
   },
-  plugins: [ require("flowbite/plugin")],
-}
-
+  plugins: [],
+};
