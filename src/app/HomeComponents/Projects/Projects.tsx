@@ -17,6 +17,8 @@ type Project = {
   tags: string[];
   githubUrl?: string;
   liveUrl?: string;
+  liveLabel?: string;
+  badge?: string;
 };
 
 const FLAGSHIP_PROJECT: Project = {
@@ -26,35 +28,42 @@ const FLAGSHIP_PROJECT: Project = {
   tags: ["Node.js", "Redis", "MongoDB", "Temporal", "Multi-Agent AI", "LLM", "RAG", "Vector Search"],
 };
 
+const STATIC_PROJECTS: Project[] = [
+  {
+    title: "My Bren",
+    description:
+      "Mobile app for Bren Corporation's Brain Homes platform, published on the Google Play Store.",
+    tags: ["Mobile App"],
+    liveUrl: "https://play.google.com/store/apps/details?id=com.brencorp.play.mybren&hl=en_IN",
+    liveLabel: "Play Store",
+  },
+  {
+    title: "Hello Mentor Portal",
+    description:
+      "Student counseling, admissions and document management portal built for Hello Mentor, supporting 4,000+ users in production.",
+    tags: ["Next.js", "Node.js", "MongoDB"],
+    liveUrl: "https://portal.hellomentor.in/",
+  },
+  {
+    title: "Hello Mentor",
+    description: "Hello Mentor's core platform for student counseling and career guidance.",
+    tags: ["Next.js", "Node.js"],
+    liveUrl: "https://hellomentor.ai/",
+  },
+  {
+    title: "CloudGuardX",
+    description: "A cloud security platform currently in active development.",
+    tags: [],
+    liveUrl: "https://cloudgaurdx.vercel.app/",
+    badge: "In Progress",
+  },
+];
+
 const FEATURED_REPOS: { slug: string; fallback: string; liveUrl?: string }[] = [
   {
     slug: "next-reticulumeducon",
     fallback: "Full-stack education platform built and shipped for a client, live in production.",
     liveUrl: "https://reticulumeducon.com/",
-  },
-  {
-    slug: "DevStream-frontend",
-    fallback:
-      "A modern web app that streams curated tech YouTube videos, built with Next.js, Tailwind CSS and Redux.",
-  },
-  {
-    slug: "thread-app-clone-graphQL",
-    fallback:
-      "Backend service for a thread-based social platform using Prisma, PostgreSQL, Node.js and GraphQL.",
-  },
-  {
-    slug: "kafka-service",
-    fallback:
-      "A Kafka-based messaging service prototype demonstrating event-driven architecture with Zookeeper.",
-  },
-  {
-    slug: "JS-AlgoArena",
-    fallback:
-      "A comprehensive collection of JavaScript algorithms and data structures for coding interview prep.",
-  },
-  {
-    slug: "new_pdf_scanner_agentic_ai",
-    fallback: "A Python-based agentic AI pipeline for scanning and extracting structured data from PDFs.",
   },
 ];
 
@@ -86,7 +95,7 @@ async function getFeaturedProjects(): Promise<Project[]> {
       }
     })
   );
-  return [FLAGSHIP_PROJECT, ...results];
+  return [FLAGSHIP_PROJECT, ...results, ...STATIC_PROJECTS];
 }
 
 const Projects = async () => {
@@ -104,7 +113,14 @@ const Projects = async () => {
           <Reveal delayMs={index * 60} key={project.title} className="h-full">
             <div className="flex h-full flex-col justify-between rounded-xl border border-border bg-surface p-6 transition-colors hover:border-neutral-600">
               <div>
-                <h3 className="font-semibold text-neutral-50">{project.title}</h3>
+                <div className="flex items-start justify-between gap-3">
+                  <h3 className="font-semibold text-neutral-50">{project.title}</h3>
+                  {project.badge && (
+                    <span className="flex-shrink-0 rounded-full border border-amber-500/40 bg-amber-500/10 px-2.5 py-1 text-[11px] font-medium text-amber-400">
+                      {project.badge}
+                    </span>
+                  )}
+                </div>
                 <p className="mt-3 text-sm leading-relaxed text-neutral-400">{project.description}</p>
                 {project.tags.length > 0 && (
                   <div className="mt-4 flex flex-wrap gap-2">
@@ -139,7 +155,7 @@ const Projects = async () => {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 text-sm text-neutral-400 hover:text-neutral-50"
                     >
-                      <FaExternalLinkAlt size={13} /> Live
+                      <FaExternalLinkAlt size={13} /> {project.liveLabel || "Live"}
                     </a>
                   )}
                 </div>
