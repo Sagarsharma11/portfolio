@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Sagar Sharma",
-  description: "Sagar Sharma's Portfolio - Showcasing Projects, Skills, and Experience",
+  title: "Sagar Sharma — Full Stack Developer",
+  description:
+    "Sagar Sharma is a Full Stack Developer specializing in React.js, Next.js, Node.js and AI/RAG-powered applications.",
 };
-
 
 export default function RootLayout({
   children,
@@ -17,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{background: "#09090B"}} className={inter.className}>{children}</body>
+      <body className={`${inter.variable} font-sans bg-canvas text-neutral-100 antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
